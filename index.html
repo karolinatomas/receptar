@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>Najdi a uvař</title>
+  </head>
+  <body>
+    <div class="main">
+      <div id="header">
+        <a href="index.html"> <h1>Najdi a uvař</h1></a>
+        <div class="search-button">
+          <form id="search">
+            <span class="material-symbols-outlined search_icon">search</span>
+            <input
+              class="button"
+              id="search_input"
+              type="search"
+              placeholder="Hledej"
+            />
+          </form>
+        </div>
+        <div class="buttons">
+          <a class="link" href="profile.html">
+            <button class="button" id="profile_button">
+              <img id="profile-photo" src="profile_photo.jpg" />Profil
+            </button>
+          </a>
+          <a class="link" href="add_recipe.html">
+            <button class="button" id="add_button">Přidat recept</button>
+          </a>
+        </div>
+      </div>
+      <div class="colorBackground">
+        <div class="introduction">
+          <div id="introduction">
+            <h3>Vítejte v mé online kuchařce</h3>
+            <h2>Objevujme společně nové recepty</h2>
+          </div>
+        </div>
+        <div class="content">
+          <div id="filtr">
+            <h2>Kategorie</h2>
+            <ul class="list">
+              <li>Snídaně</li>
+              <li>Oběd</li>
+              <li>Večeře</li>
+              <li>Svačina</li>
+              <li>Mlsání</li>
+            </ul>
+          </div>
+          <div class="recipes">
+            <a href="recipe.html?recipeId=1"" class="recipe-block">
+              <img class="image_of_food" src="img/ovesnaKase.jpg" />
+              <div class="food_information">
+                <h3>Ovesná kaše s ovocem a ořechy</h3>
+                <p>
+                  Ráno plné energie: Ovesné kaše s banánem a ořechy, dokonalá
+                  snídaně pro skvělý start.
+                </p>
+              </div>
+            </a>
+            <a href="recipe.html?recipeId=2" class="recipe-block">
+              <img src="img/salatCaesar.jpeg" class="image_of_food" />
+              <div class="food_information">
+                <h3>Kuřecí ceasar salát</h3>
+                <p>
+                  Chutný luxus oběda: Kuřecí Caesar salát s křupavými krutony a
+                  sytým parmezánem.
+                </p>
+              </div>
+            </a>
+            <a href="recipe.html?recipeId=3" class="recipe-block">
+              <img src="img/tunakAvokado.jpg" class="image_of_food" />
+              <div class="food_information">
+                <h3>Tuňákový sendvič s avokádem</h3>
+                <p>
+                  Překvapení v každém soustu: Tunakový sendvič s avokádem,
+                  svačina plná lahodné harmonie.
+                </p>
+              </div>
+            </a>
+            <a href="recipe.html?recipeId=4" class="recipe-block">
+              <img src="img/rajcatovaPolevka.jpg" class="image_of_food" />
+              <div class="food_information">
+                <h3>Rajčatová polévka s bazalkou</h3>
+                <p>
+                  Osvežení večer: Rajčatová polévka s čerstvou bazalkou,
+                  jednoduchá a plná chuti.
+                </p>
+              </div>
+            </a>
+            <a href="recipe.html?recipeId=5" class="recipe-block">
+              <img src="img/livance.png" class="image_of_food" />
+              <div class="food_information">
+                <h3>Pohankové lívance s lesním ovocem</h3>
+                <p>
+                  Sladký start: Pohankové lívance s lesním ovocem, zdravá
+                  snídaně plná lahodného dobrodružství.
+                </p>
+              </div>
+            </a>
+            <a href="recipe.html?recipeId=6" class="recipe-block">
+              <img src="img/quinoaSalat.jpg" class="image_of_food" />
+              <div class="food_information">
+                <h3>Quinoa salát s grilovaným zeleným hráškem</h3>
+                <p>
+                  Vítejte v chuťovém ráji: Quinoa salát s grilovaným hráškem a
+                  pikantní fetou.
+                </p>
+              </div>
+            </a>
+            <a href="recipe.html?recipeId=7" class="recipe-block">
+              <img src="img/hummus.jpg" class="image_of_food" />
+              <div class="food_information">
+                <h3>Hummus s čerstvou zeleninou</h3>
+                <p>
+                  Svačina s elegancí: Hummus s čerstvou zeleninou, kombinace
+                  zdraví a lahodné chutě.
+                </p>
+              </div>
+            </a>
+            <a href="recipe.html?recipeId=8" class="recipe-block">
+              <img src="img/ryzovePlacicky.jpg" class="image_of_food" />
+              <div class="food_information">
+                <h3>Rýžové placičky se zeleninou a sójovým dipem</h3>
+                <p>
+                  Rýžové placičky – křehká extáze chutí, lákavě zdravá návnada
+                  pro oběd.
+                </p>
+              </div>
+            </a>
+            <a href="recipe.html?recipeId=9" class="recipe-block">
+              <img src="img/dort.jpg" class="image_of_food" />
+              <div class="food_information">
+                <h3>Jogurtový ovocný dort s medem a ořechy</h3>
+                <p>
+                  Jogurtový ovocný dort – harmonie krémové lahodnosti a čerstvé
+                  ovocné vášně.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="recipe.js" defer></script>
+  </body>
+</html>
