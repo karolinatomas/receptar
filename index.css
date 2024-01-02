@@ -10,8 +10,11 @@ li,
 .ingredient {
   color: aliceblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
 }
-
+.mobileNav {
+  display: none;
+}
 #header {
   display: flex;
   justify-content: space-between;
@@ -47,6 +50,7 @@ li,
   margin-left: 0.5em;
   width: 25em;
   padding-left: 3em;
+  font-size: 25px;
 }
 
 .link {
@@ -60,6 +64,7 @@ button,
   border: none;
   height: 4em;
   color: aliceblue;
+  font-size: 25px;
 }
 .content {
   display: flex;
@@ -84,7 +89,7 @@ button,
 }
 
 #introduction {
-  padding-top: 10%;
+  padding-top: 8%;
 }
 
 .colorBackground {
@@ -354,6 +359,11 @@ a:link {
   margin: auto;
   padding-bottom: 1em;
 }
+
+#single_recipe h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 #single_recipe img {
   width: 25em;
   height: 18em;
@@ -400,4 +410,198 @@ a:link {
 }
 #directions_single h2 {
   margin-top: 2em;
+}
+
+@media screen and (max-width: 1680px) {
+  p,
+  h3 {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+  .recipes {
+    width: 70%;
+  }
+
+  #search_input,
+  .button,
+  button {
+    font-size: 20px;
+  }
+  .introduction {
+    width: 85%;
+  }
+
+  #introduction {
+    padding-top: 13%;
+  }
+
+  #filtr {
+    margin-right: 5em;
+  }
+
+  .recipe-block {
+    width: 95%;
+    margin-left: 0;
+  }
+
+  .image_of_food {
+    width: 80%;
+  }
+
+  .right_side {
+    flex-direction: column;
+  }
+  .information,
+  #directions_single {
+    width: 90%;
+    margin: 0;
+  }
+  #directions_single {
+    height: fit-content;
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  p,
+  li,
+  button,
+  .button {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  .recipes {
+    grid-template-columns: auto auto;
+    width: 100%;
+  }
+
+  .content {
+    flex-wrap: nowrap;
+    margin: 0em 1em;
+  }
+  .introduction {
+    height: 100%;
+  }
+  #introduction {
+    padding: 3%;
+  }
+  #filtr {
+    margin-right: 2%;
+  }
+
+  #search_input {
+    width: 100%;
+  }
+
+  #single_recipe {
+    flex-wrap: wrap;
+    margin: auto;
+    width: 70%;
+  }
+  #left_side_single {
+    width: 100%;
+    margin-bottom: 5%;
+    margin-right: 0;
+  }
+  .image_of_food {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  #single_recipe img {
+    width: 18em;
+    height: 15em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main {
+    width: 90%;
+    margin: auto;
+  }
+  .mobileNav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 3%;
+    background-color: #27292a;
+    border-radius: 23px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .icon {
+    width: 20%;
+    cursor: pointer;
+  }
+  #myLinks {
+    display: none;
+  }
+
+  #header {
+    display: block;
+    display: none;
+  }
+  #myLinks {
+    width: 100%;
+    background: #27292a;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    right: 0;
+    position: absolute;
+    top: 70%;
+    border-radius: 23px;
+  }
+  .mobileNav a {
+    color: aliceblue;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  #filtr {
+    display: none;
+  }
+
+  .recipes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .food_information p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  #single_recipe img {
+    width: 15em;
+    height: 12em;
+  }
+}
+
+@media screen and (max-width: 400) {
+  #single_recipe {
+    width: 13em;
+    height: 11em;
+  }
+}
+@media screen and (max-width: 380px) {
+  #single_recipe img {
+    width: 12em;
+    height: 10em;
+  }
 }
