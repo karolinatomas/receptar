@@ -10,30 +10,32 @@ li,
 .ingredient {
   color: aliceblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 25px;
+}
+h1,
+h2 {
+  font-size: calc(25px + 0.65104125vw);
+}
+p,
+li,
+#two_upper_buttons,
+#search_input {
+  font-size: calc(15px + 0.390625vw);
+}
+
+h3 {
+  font-size: calc(20px + 0.520833vw);
 }
 .mobileNav {
   display: none;
 }
+
+/*navigation*/
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: fit-content;
   margin-bottom: 2em;
 }
-
-.buttons {
-  max-width: 20%;
-  display: flex;
-}
-
-#profile_button,
-#add_button {
-  width: 90%;
-  margin-right: 0.5em;
-}
-
 #search {
   display: flex;
   align-items: center;
@@ -45,18 +47,31 @@ li,
 }
 
 #search_input {
-  font-size: 16px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-left: 0.5em;
-  width: 25em;
+  width: 20vw;
   padding-left: 3em;
-  font-size: 25px;
 }
-
 .link {
   width: 100%;
 }
+.buttons {
+  max-width: 20%;
+  display: flex;
+}
 
+#two_upper_buttons {
+  width: 90%;
+  margin-right: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 7%;
+  padding: 0 0.5em;
+}
+
+#button_photo {
+  width: 35%;
+  padding: 0 0.5em;
+  border-radius: 50%;
+}
 button,
 .button {
   border-radius: 23px;
@@ -64,13 +79,24 @@ button,
   border: none;
   height: 4em;
   color: aliceblue;
-  font-size: 25px;
 }
 .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0em 4em;
+}
+
+@media screen and (max-width: 1450px) {
+  #two_upper_buttons {
+    justify-content: center;
+  }
+  #btn_hide_text {
+    display: none;
+  }
+  #button_photo {
+    width: 3em;
+  }
 }
 
 /*index*/
@@ -92,7 +118,7 @@ button,
   padding-top: 8%;
 }
 
-.colorBackground {
+.color_background {
   margin: auto;
   background-color: #27292a;
   width: 85%;
@@ -143,9 +169,6 @@ button,
   top: 0;
 }
 
-#profile-photo {
-  width: 20%;
-}
 h1 {
   margin-left: 1em;
   color: white;
@@ -413,14 +436,6 @@ a:link {
 }
 
 @media screen and (max-width: 1680px) {
-  p,
-  h3 {
-    font-size: 18px;
-  }
-
-  h1 {
-    font-size: 23px;
-  }
   .recipes {
     width: 70%;
   }
@@ -466,18 +481,6 @@ a:link {
 }
 
 @media screen and (max-width: 1360px) {
-  p,
-  li,
-  button,
-  .button {
-    font-size: 13px;
-  }
-  h1 {
-    font-size: 18px;
-  }
-  h2 {
-    font-size: 15px;
-  }
   .recipes {
     grid-template-columns: auto auto;
     width: 100%;
@@ -523,7 +526,22 @@ a:link {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 768px) {
+  h1,
+  h2 {
+    font-size: calc(20px + 0.520833vw);
+  }
+
+  h3 {
+    font-size: calc(15px + 0.390625vw);
+  }
+  p,
+  li,
+  #two_upper_buttons,
+  #search_input {
+    font-size: calc(10px + 0, 260416);
+  }
+
   .main {
     width: 90%;
     margin: auto;
@@ -541,7 +559,7 @@ a:link {
   }
 
   .icon {
-    width: 20%;
+    width: 10%;
     cursor: pointer;
   }
   #myLinks {
