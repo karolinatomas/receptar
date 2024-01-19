@@ -6,24 +6,25 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Najdi a uvař</title>
   </head>
   <body>
     <div class="mobileNav">
       <a href="index.html" class="active"><h1>Najdi a uvař</h1></a>
-      <img src="img/hamburgerMenu.png" class="icon" onclick="hamburgerMenu()" />
-      <div id="myLinks">
-        <a href="index.html">Domů</a>
-        <a href="profile.html">Profile</a>
-        <a href="add_recipe.html">Přidat recept</a>
+        <img src="img/hamburgerMenu.png" class="icon" onclick="hamburgerMenu()">
+        <div id="myLinks">
+          <a href="index.html">Domů</a>
+          <a href="profile.html">Profile</a>
+          <a href="add_recipe.html">Přidat recept</a>
+        
       </div>
     </div>
+
     <div class="main">
       <div id="header">
         <a href="index.html"> <h1>Najdi a uvař</h1></a>
-        <div class="search-button">
+
           <form id="search">
             <span class="material-symbols-outlined search_icon">search</span>
             <input
@@ -33,15 +34,19 @@
               placeholder="Hledej"
             />
           </form>
-        </div>
+       
         <div class="buttons">
           <a class="link" href="profile.html">
-            <button class="button" id="profile_button">
-              <img id="profile-photo" src="profile_photo.jpg" />Profil
+            <button  id="two_upper_buttons">
+              <img id="button_photo" src="img/profile_photo.jpg" />
+              <span id="btn_hide_text">Profil</span>
             </button>
           </a>
           <a class="link" href="add_recipe.html">
-            <button class="button" id="add_button">Přidat recept</button>
+            <button  id="two_upper_buttons"><span id = "button_photo"class="material-symbols-outlined">
+              add_circle</span><span id="btn_hide_text">Přidat recept</span></button>
+          
+              </span></button>
           </a>
         </div>
       </div>
