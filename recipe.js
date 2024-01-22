@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
         img: "img/tunakAvokado.jpg",
         ingredient: [
           { namein: "Tuňák", amount: 1, unit: "konzerva (160g)" },
-          { namein: "Avokádo", amount: 1, unit: null },
+          { namein: "Avokádo", amount: 1, unit: "ks" },
           { namein: "Celozrnný chléb", amount: 4, unit: "plátky" },
-          { namein: "Červená cibule", amount: 1 / 4, unit: null },
+          { namein: "Červená cibule", amount: 1 / 4, unit: "ks" },
           { namein: "Sůl", amount: " ", unit: "podle chuti" },
           { namein: "Pepř", amount: " ", unit: "podle chuti" },
         ],

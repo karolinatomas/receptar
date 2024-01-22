@@ -1,5 +1,8 @@
 body {
   background-color: #1f2122;
+  width: 95%;
+  margin: auto;
+  margin-top: 1em;
 }
 
 p,
@@ -29,7 +32,14 @@ h3 {
   display: none;
 }
 
-/*navigation*/
+/*
+
+
+NAVIGATION
+
+
+
+*/
 #header {
   display: flex;
   justify-content: space-between;
@@ -60,11 +70,15 @@ h3 {
 
 #two_upper_buttons {
   width: 90%;
-  margin-right: 0.1em;
   display: flex;
   align-items: center;
   gap: 7%;
-  padding: 0 0.5em;
+}
+
+#two_upper_buttons:hover {
+  transform: scale(1.1);
+  transition: transform(0.6ms);
+  cursor: pointer;
 }
 
 #button_photo {
@@ -80,12 +94,6 @@ button,
   height: 4em;
   color: aliceblue;
 }
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0em 4em;
-}
 
 @media screen and (max-width: 1450px) {
   #two_upper_buttons {
@@ -99,23 +107,17 @@ button,
   }
 }
 
-/*index*/
+/*
 
-.introduction {
-  height: 25em;
-  background-image: url("img/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 23px;
-  width: 89%;
-  text-align: center;
-  line-height: 1.5;
-  margin: auto;
-  margin-bottom: 3%;
-}
 
-#introduction {
-  padding-top: 8%;
+INDEX
+
+
+*/
+.content {
+  display: flex;
+
+  justify-content: center;
 }
 
 .color_background {
@@ -123,27 +125,57 @@ button,
   background-color: #27292a;
   width: 85%;
   border-radius: 23px;
-  padding-top: 3%;
+  padding: 3%;
 }
+
+.introduction {
+  height: 20vw;
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 23px;
+  text-align: center;
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: center;
+}
+
+#introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#filtr {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  background-color: #1f2122;
+  margin-right: 2em;
+  padding: 0 2em;
+  border-radius: 23px;
+  height: 50%;
+  position: sticky;
+  top: 0;
+}
+
 .recipes {
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: #1f2122;
   border-radius: 23px;
-  width: 80%;
-  padding: 0 2em 2em;
+  padding: 3% 2%;
 }
-
 .recipe-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  transition: transform 0.2s;
+  width: 90%;
   background-color: #27292a;
-  margin: 2em 0 0 2em;
-
   border-radius: 23px;
+  transition: transform 0.2s;
+  margin-bottom: 10%;
 }
 
 .recipe-block:hover {
@@ -155,41 +187,22 @@ button,
   padding: 0;
 }
 
-#filtr {
-  display: flex;
-  flex-direction: column;
-  width: 10em;
-  align-items: center;
-  background-color: #1f2122;
-  margin-right: 2em;
-  border-radius: 23px;
-  height: 50%;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-h1 {
-  margin-left: 1em;
-  color: white;
-}
 a:link {
   text-decoration: none;
 }
 
 .image_of_food {
-  width: 60%;
   margin-top: 2em;
-  float: left;
-  width: 15em;
-  height: 10em;
+  width: 17em;
+  height: 12em;
   background-size: cover;
   border-radius: 23px;
 }
 
 .food_information {
   text-align: center;
-  margin: 0 2em;
+  margin: auto;
+  padding: 0 5%;
 }
 
 #filtr h2 {
@@ -199,7 +212,22 @@ a:link {
 .list li {
   margin-bottom: 1em;
 }
-/*add recipe*/
+
+.list li:hover {
+  transform: scale(1.1);
+  transition: transform(0.6ms);
+  cursor: pointer;
+}
+
+/*
+
+
+
+add recipe
+
+
+
+*/
 
 .content_add_recipe {
   background-color: #27292a;
@@ -305,17 +333,6 @@ a:link {
   list-style-type: none;
   color: aliceblue;
 }
-/*
-.button_recipe {
-  margin-left: 1em;
-}
-.fix_ingredient {
-  margin-right: 2em;
-}
-
-.save_recipe {
-  margin-left: 2em;
-}*/
 
 .button_recipe {
   display: flex;
@@ -435,69 +452,19 @@ a:link {
   margin-top: 2em;
 }
 
-@media screen and (max-width: 1680px) {
+@media screen and (max-width: 1620px) {
+  #introduction h2,
+  #introduction h3 {
+    font-size: calc(17px + 0.442708vw);
+  }
   .recipes {
-    width: 70%;
-  }
-
-  #search_input,
-  .button,
-  button {
-    font-size: 20px;
-  }
-  .introduction {
-    width: 85%;
-  }
-
-  #introduction {
-    padding-top: 13%;
-  }
-
-  #filtr {
-    margin-right: 5em;
+    grid-template-columns: auto auto;
   }
 
   .recipe-block {
-    width: 95%;
-    margin-left: 0;
-  }
-
-  .image_of_food {
-    width: 80%;
-  }
-
-  .right_side {
-    flex-direction: column;
-  }
-  .information,
-  #directions_single {
-    width: 90%;
-    margin: 0;
-  }
-  #directions_single {
-    height: fit-content;
-    margin-top: 2em;
-  }
-}
-
-@media screen and (max-width: 1360px) {
-  .recipes {
-    grid-template-columns: auto auto;
-    width: 100%;
-  }
-
-  .content {
-    flex-wrap: nowrap;
-    margin: 0em 1em;
-  }
-  .introduction {
-    height: 100%;
-  }
-  #introduction {
-    padding: 3%;
-  }
-  #filtr {
-    margin-right: 2%;
+    margin: auto;
+    height: 95%;
+    margin-bottom: 7%;
   }
 
   #search_input {
@@ -514,19 +481,29 @@ a:link {
     margin-bottom: 5%;
     margin-right: 0;
   }
-  .image_of_food {
-    width: 90%;
-  }
 }
 
-@media screen and (max-width: 590px) {
-  #single_recipe img {
-    width: 18em;
-    height: 15em;
+@media screen and (max-width: 1150px) {
+  .recipes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .food_information {
+    padding: 2em 3em;
+  }
+
+  .image_of_food {
+    width: 40vw;
+    height: 30vw;
   }
 }
 
 @media screen and (max-width: 768px) {
+  #introduction h2,
+  #introduction h3 {
+    font-size: calc(12px + 0.3125vw);
+  }
   h1,
   h2 {
     font-size: calc(20px + 0.520833vw);
@@ -543,8 +520,7 @@ a:link {
   }
 
   .main {
-    width: 90%;
-    margin: auto;
+    width: 100%;
   }
   .mobileNav {
     display: flex;
@@ -602,6 +578,20 @@ a:link {
   .food_information p {
     display: none;
   }
+
+  .recipe-block {
+    background-color: #1f2122;
+  }
+  .recipes {
+    background-color: #27292a;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  #single_recipe img {
+    width: 18em;
+    height: 15em;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -621,5 +611,9 @@ a:link {
   #single_recipe img {
     width: 12em;
     height: 10em;
+  }
+
+  .introduction {
+    height: 40vw;
   }
 }
