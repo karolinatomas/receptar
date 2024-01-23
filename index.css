@@ -182,12 +182,8 @@ INDEX
   transform: scale(1.1);
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-}
-
-a:link {
+a:link,
+.list a:link {
   text-decoration: none;
 }
 
@@ -209,11 +205,18 @@ a:link {
   margin-bottom: 0.5em;
 }
 
-.list li {
+.list {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(15px + 0.390625vw);
+}
+
+.list a {
+  color: aliceblue;
   margin-bottom: 1em;
 }
 
-.list li:hover {
+.list a:hover {
   transform: scale(1.1);
   transition: transform(0.6ms);
   cursor: pointer;
