@@ -164,29 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Vytvořte vrstvy jogurtu a ovoce. Ozdobte medem a ořechy. Dort pro sladkou radost.",
     },
   ];
-  /*
-  let recipeBlocks = document.querySelector(`.recipe-block`);
 
-  const categoryId = urlParams.get("categoryId");
-  let removeRecipe = [...recipes];
-  let filteredRecipes;
-  if (categoryId) {
-    filteredRecipes = recipes.filter((r) => r.category == categoryId);
-    filteredRecipes.forEach((i) =>
-      removeRecipe.splice(removeRecipe.indexOf(i), 1)
-    );
-
-    for (let i = 0; i < removeRecipe.length; i++) {
-      const originalIndex = recipes.indexOf(removeRecipe[i]);
-      if (recipeBlocks[originalIndex]) {
-        if (removeRecipe[i].category != categoryId) {
-          recipeBlocks[originalIndex].style.display = "none";
-        }
-      } else {
-        recipeBlocks[originalIndex].style.display = "flex";
-      }
-    }
-  }*/
   let recipeBlocks = document.querySelectorAll(".recipe-block");
 
   const categoryId = urlParams.get("categoryId");
@@ -200,12 +178,12 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     recipeBlocks.forEach((block, index) => {
-      const isRecipeInFilteredList = removeRecipe.some(
+      const isRecipeInFilteredList = filteredRecipes.some(
         (r) => r === recipes[index]
       );
 
       block.style.display =
-        !isRecipeInFilteredList && categoryId !== undefined ? "flex" : "none";
+        isRecipeInFilteredList && categoryId !== undefined ? "flex" : "none";
     });
   }
 
@@ -213,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const recipe = recipes.find((r) => r.id == recipeId);
 
     if (recipe) {
-      const div2 = document.querySelector(".left_side");
+      const div2 = document.querySelector(".left_side_single");
       const para = document.createElement("p");
       const descriptionText = document.createTextNode(recipe.description);
       const image = document.createElement("img");
@@ -241,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
         div3.appendChild(paraIngredient);
       });
 
-      const div4 = document.querySelector(".directions");
+      const div4 = document.querySelector(".directions_single");
 
       const paraDirection = document.createElement("p");
       const paraDirectionText = document.createTextNode(recipe.direction);

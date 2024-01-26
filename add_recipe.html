@@ -86,47 +86,46 @@
         </div>
         <div class="flex_column">
           <div class="information">
-            <div id="information">
+            <div id="name">
               <p>Název jídla:</p>
-              <form class="name">
-                <input type="text" placeholder="Název" style="width: 70%" />
-              </form>
-            </div>
-            <div id="information">
               <p>Ingredience:</p>
+              <p id="add_margin">Počet porcí:</p>
+              <p>Kategorie:</p>
+            </div>
+            <div id ="forms">
+              <form class="name">
+                <input type="text" placeholder="Název"  />
+              </form>
+              <span class="ingredients">
               <form class="ingredient">
                 <input
                   type="text"
                   placeholder="Název ingredience"
-                  style="width: 86%"
-                />
-                <div class="row_ingredient">
+                  
+                /><span class="ingredient_inputs">
                   <input type="number" placeholder="Množství" />
                   <input type="number" placeholder="Jednotka" />
-                </div>
-              </form>
-              <button class="button add_ingredient">Přidat ingredienci</button>
-            </div>
-            <div id="information">
-              <p>Počet porcí:</p>
+                  </span>
+                </form>
+                  <button class="button add_ingredient">Přidat ingredienci</button>
+              </span>
               <form class="servings">
                 <input
                   type="text"
                   placeholder="Propisování množství"
-                  style="width: 70%"
+                 
                 />
               </form>
-            </div>
-            <div id="information">
-              <p>Kategorie:</p>
               <form class="category">
-                <input type="text" placeholder="Kategorie" style="width: 70%" />
+                <input type="text" placeholder="Kategorie"  />
               </form>
             </div>
           </div>
+          
           <div class="directions">
             <p>Postup</p>
             <textarea id="directions" name="postup"></textarea>
+
           </div>
         </div>
       </div>

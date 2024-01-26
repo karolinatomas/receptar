@@ -232,31 +232,35 @@ add recipe
 
 */
 
+/*left side*/
 .content_add_recipe {
   background-color: #27292a;
   display: flex;
   justify-content: center;
-  margin: 10em;
   border-radius: 23px;
-  margin-top: 0;
-  margin-bottom: 0;
   padding: 5em 0;
 }
 
 .left_side {
   width: 35%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   border-radius: 23px;
   background-color: #1f2122;
   margin-right: 5em;
-  padding: 4em 0;
-  padding-right: 3em;
+  padding: 4em 1em;
+}
+
+.food_image,
+.written_ingredient {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .directions,
-.information {
+.information,
+.information_single,
+.left_side_single,
+.directions_single {
   border-radius: 23px;
   background-color: #1f2122;
   margin-bottom: 2em;
@@ -264,47 +268,27 @@ add recipe
   height: 45%;
 }
 
-.directions {
-  padding-top: 0;
-  text-align: center;
-}
-.flex_column {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-}
-.food_image,
-.written_ingredient {
+#food_image {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-.information {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-#information {
-  display: flex;
-  flex-direction: row;
 }
 
 .blurred {
   filter: blur(8px);
   -webkit-filter: blur(8px);
   width: 90%;
-  margin-left: 3em;
+  margin: auto;
 }
 
-#food_image {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#food_image label {
+  position: absolute;
+  padding: 10px 15px;
+  border-radius: 23px;
+  background-color: #27292a;
+  border: none;
+  cursor: pointer;
+  color: aliceblue;
 }
 
 #food_image input {
@@ -315,26 +299,12 @@ add recipe
   color: white;
 }
 
-/* Styly pro tlačítko 
-(nahradí text) */
-#food_image label {
-  position: absolute;
-  margin-left: 3em;
-  padding: 10px 15px;
-  border-radius: 23px;
-  background-color: #27292a;
-  border: none;
-  cursor: pointer;
-  color: aliceblue;
-}
-
-.directions {
-  width: 100%;
-}
-
 .written_ingredient li {
   list-style-type: none;
   color: aliceblue;
+}
+.written_ingredient ul {
+  padding: 0;
 }
 
 .button_recipe {
@@ -344,34 +314,23 @@ add recipe
   width: 50%;
 }
 
-#information {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#information form {
-  width: 80%;
+.save_recipe {
+  width: 10em;
 }
 
-.ingredient {
-  margin-left: 2.8em;
+/*
+Right side - add_recipes
+*/
+.flex_column {
   display: flex;
   flex-direction: column;
 }
-
-.ingredient input {
-  margin: 0.5em 0;
+.directions {
+  padding-top: 0;
+  text-align: center;
 }
 
-.row_ingredient {
-  width: 100%;
-}
-
-.add_ingredient {
-  align-self: center;
-}
-
-#information input,
+.information input,
 .directions textarea {
   border-radius: 23px;
   background-color: #27292a;
@@ -381,12 +340,72 @@ add recipe
   color: aliceblue;
 }
 
+.information {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+#forms,
+#name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#add_margin {
+  margin-top: 2.5em;
+}
+
+#forms input {
+  width: 100%;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+
+.ingredient {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1em;
+}
+
+.ingredient_inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.ingredient_inputs input {
+  margin-top: 1em;
+}
+
+.directions {
+  width: 100%;
+  margin-top: 2em;
+}
+
 .directions textarea {
   width: 95%;
   height: 10em;
 }
 
-/*recipess*/
+/*
+
+
+
+
+recipess
+
+
+
+
+*/
 
 .food_photo {
   width: 50%;
@@ -408,8 +427,8 @@ add recipe
   margin-bottom: 0;
 }
 #single_recipe img {
-  width: 25em;
-  height: 18em;
+  width: 25vw;
+  height: 15vw;
   margin: auto;
 }
 
@@ -417,16 +436,18 @@ add recipe
   text-align: center;
 }
 
-#left_side_single {
+.left_side_single {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 3em;
   padding: 2em;
   height: 80%;
   width: 40%;
-  justify-content: center;
 }
 
-.information {
-  width: 40%;
-  height: 80%;
+.information_single {
+  width: 70%;
   margin-right: 5em;
   margin-bottom: 0;
 }
@@ -447,12 +468,11 @@ add recipe
   flex-direction: row;
   align-items: center;
 }
-#directions_single {
-  width: 40%;
+
+.directions_single {
   margin-bottom: 0;
-}
-#directions_single h2 {
-  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 1620px) {
@@ -474,15 +494,13 @@ add recipe
     width: 100%;
   }
 
-  #single_recipe {
-    flex-wrap: wrap;
-    margin: auto;
-    width: 70%;
+  .right_side {
+    flex-direction: column;
+    width: 90%;
   }
-  #left_side_single {
-    width: 100%;
-    margin-bottom: 5%;
-    margin-right: 0;
+  .information_single {
+    width: 90%;
+    margin: 0 0 1em 0;
   }
 }
 
@@ -503,6 +521,8 @@ add recipe
 }
 
 @media screen and (max-width: 768px) {
+  /*předělat jednotlivý recepty pod sebe*/
+
   #introduction h2,
   #introduction h3 {
     font-size: calc(12px + 0.3125vw);
